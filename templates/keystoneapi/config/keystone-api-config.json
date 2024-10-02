@@ -26,12 +26,6 @@
       "perm": "0644"
     },
     {
-      "source": "/var/lib/config-data/default/federation.conf",
-      "dest": "/etc/httpd/conf.d/federation.conf",
-      "owner": "root",
-      "perm": "0644"
-    },
-    {
       "source": "/var/lib/config-data/tls/certs/*",
       "dest": "/etc/pki/tls/certs/",
       "owner": "root",
