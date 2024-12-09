@@ -1517,11 +1517,6 @@ func (r *KeystoneAPIReconciler) ensureFernetKeys(
 			return nil
 		}
 
-		fernetKeys := make(map[string]string, len(secret.Data))
-		for k, v := range secret.Data {
-			fernetKeys[k] = string(v[:])
-		}
-
 		secret.Annotations[fernetAnnotation] = now.Format(time.RFC3339)
 
 		// use update to apply changes to the secret, since EnsureSecrets
